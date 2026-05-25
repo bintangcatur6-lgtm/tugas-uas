@@ -7915,6 +7915,144 @@ Jumlah Eigenface : (2, 10000)
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4c585a78">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ol>
+<li>Representasi Gambar Wajah</li>
+</ol>
+<p>Awalnya gambar wajah diubah menjadi matriks piksel.</p>
+<p>Contoh:
+gambar 100 × 100 piksel</p>
+<p>100×100=10000</p>
+<p>Artinya satu gambar memiliki 10.000 nilai piksel.</p>
+<p>Kemudian gambar diubah menjadi vector:</p>
+<p>x=[x
+1
+​</p>
+<p>,x
+2
+​</p>
+<p>,x
+3
+​</p>
+<p>,...,x
+n
+​</p>
+<p>]
+T</p>
+<p>Keterangan:</p>
+<p>x = vector wajah
+n = jumlah piksel
+2. Mean Face (Rata-rata Wajah)</p>
+<p>Semua wajah dijumlahkan lalu dicari rata-ratanya.</p>
+<p>Rumus:</p>
+<p>μ=
+M
+1
+​</p>
+<p>∑
+i=1
+M
+​</p>
+<p>x
+i
+​</p>
+<p>Keterangan:</p>
+<p>μ = mean face
+M = jumlah gambar wajah
+xᵢ = gambar wajah ke-i</p>
+<p>Tujuan:</p>
+<p>mencari wajah rata-rata dari seluruh dataset.
+3. Normalisasi Data</p>
+<p>Setiap wajah dikurangi mean face.</p>
+<p>Rumus:</p>
+<p>A=X−μ</p>
+<p>Keterangan:</p>
+<p>A = data hasil normalisasi
+X = data wajah asli
+μ = mean face</p>
+<p>Tujuan:</p>
+<p>menghilangkan informasi yang tidak penting,
+fokus pada perbedaan antar wajah.
+4. Singular Value Decomposition (SVD)</p>
+<p>Setelah normalisasi dilakukan SVD:</p>
+<p>A=UΣV
+T</p>
+<p>Keterangan:</p>
+<p>A = matriks wajah
+U = matriks fitur
+Σ = singular values
+Vᵀ = eigenface
+5. Eigenface</p>
+<p>Eigenface diambil dari:</p>
+<p>V
+T</p>
+<p>Bagian ini berisi pola wajah utama.</p>
+<p>Hasilnya terlihat seperti wajah abu-abu abstrak.</p>
+<p>Contoh visual Eigenface:</p>
+<ol start="6">
+<li>Projection Wajah</li>
+</ol>
+<p>Wajah baru diproyeksikan ke ruang eigenface.</p>
+<p>Rumus:</p>
+<p>ω
+k
+​</p>
+<p>=u
+k
+T
+​</p>
+<p>(x−μ)</p>
+<p>Keterangan:</p>
+<p>ωₖ = bobot fitur wajah
+uₖ = eigenface ke-k
+x = wajah baru
+μ = mean face</p>
+<p>Tujuan:</p>
+<p>menentukan kemiripan wajah.
+Inti Konsep Eigenface</p>
+<p>Eigenface bekerja dengan:</p>
+<p>mengubah wajah menjadi angka,
+mencari pola utama,
+mengurangi dimensi data,
+lalu membandingkan wajah berdasarkan pola tersebut.
+Kesimpulan</p>
+<p>Rumus penting pada Eigenface:</p>
+<p>Mean Face</p>
+<p>μ=
+M
+1
+​</p>
+<p>∑
+i=1
+M
+​</p>
+<p>x
+i
+​</p>
+<p>Normalisasi</p>
+<p>A=X−μ</p>
+<p>SVD</p>
+<p>A=UΣV
+T</p>
+<p>Projection</p>
+<p>ω
+k
+​</p>
+<p>=u
+k
+T
+​</p>
+<p>(x−μ)</p>
+<p>Semua rumus ini digunakan untuk membantu komputer mengenali wajah manusia secara matematis.</p>
+</div>
+</div>
+</div>
+</div>
 </main>
 </body>
 </html>
